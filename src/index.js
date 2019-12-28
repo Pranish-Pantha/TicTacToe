@@ -51,13 +51,13 @@ class Game extends React.Component {
         }
       ],
       stepNumber: 0,
-      xIsNext: false
+      xIsNext: true
     };
   }
   jumpTo(step) {
     this.setState({
       stepNumber: step,
-      xIsNext: !((step % 2) === 0)
+      xIsNext: (step % 2) === 0
     });
   }
   handleClick(i) {
@@ -67,7 +67,7 @@ class Game extends React.Component {
     if (calculateWinner(squares) || squares[i]) {
       return;
     }
-    squares[i] = this.state.xIsNext ? "V" : "C";
+    squares[i] = this.state.xIsNext ? "P" : "Y";
     this.setState({
       history: history.concat([
         {
@@ -101,7 +101,7 @@ class Game extends React.Component {
     if (winner) {
       status = "Chamption: " + winner;
     } else {
-      status = "Player " + (this.state.xIsNext?"RandPlayer":"Panther314")+": " + (this.state.xIsNext ? "V" : "C");
+      status = "Player " + (this.state.xIsNext?"Panther314":"RandPlayer")+": " + (this.state.xIsNext ? "O" : "X");
     }
 
     return (
