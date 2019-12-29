@@ -1,3 +1,17 @@
+A few notes:
+
+1. Player O always goes first
+
+2. Player O uses Y and Player X uses P
+
+3. Normal Tic-Tac-Toe rules, but you can also win with this:
+
+| o | _ | _ |
+
+| _ | o | _ |
+
+| o | _ | _ |
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
